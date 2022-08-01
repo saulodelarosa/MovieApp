@@ -1,0 +1,29 @@
+﻿@model IEnumerable<CustomerResponseModel>
+<h1>Customers List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Country</th>
+            <th>Region</th>
+            <th>Options</th>
+        </tr>
+
+    </thead>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Name</td>
+            <td>@c.City</td>
+            <td>@c.Phone</td>
+            <td>@c.Country </td>
+            <td>@c.RegionName</td>
+            <td>
+                <a class="btn btn-warning" asp-action="Detail" asp-controller="Customer" asp-route-id="@c.Id">Details</a>
+            </td>
+        </tr>
+
+    }
+    </table>

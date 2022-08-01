@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MovieModel>
+
+<h1>Region List</h1>
+<a asp-action="Create" asp-controller="Region">Create new region</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var m in Model)
+        {
+            <tr>
+                <td>@m.Id</td>
+                <td>@m.Name </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-success" asp-controller="Region" asp-route-id="@m.Id">Edit</a>
+                    <a asp-action ="Delete" class="btn btn-danger" asp-controller="Region" asp-route-regionId="@m.Id" >Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
