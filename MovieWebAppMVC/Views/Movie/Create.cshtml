@@ -1,0 +1,56 @@
+﻿@using ApplicationCore.Models
+@model MovieCreateRequestModel
+
+
+@using (@Html.BeginForm("Create","Movie",FormMethod.Post))
+{
+    <span>Title</span>
+    @Html.EditorFor(m=>m.Title)
+    @Html.ValidationMessageFor(m=>m.Title)<br/>
+    <span>Overview</span>
+    @Html.TextAreaFor(m=>m.Overview)
+    @Html.ValidationMessageFor(m=>m.Overview)<br/>
+    
+    <span>Tagline</span>
+    @Html.TextBoxFor(m=>m.Tagline)
+    @Html.ValidationMessageFor(m=>m.Tagline)<br/>
+    
+    <span>Revenue</span>
+    @Html.TextBoxFor(m=>m.Revenue)
+    @Html.ValidationMessageFor(m=>m.Revenue)<br/>
+
+    <span>Budget</span>
+    @Html.TextBoxFor(m=>m.Budget)
+    @Html.ValidationMessageFor(m=>m.Budget)<br/>
+
+    <span>Imdb url</span>
+    @Html.TextBoxFor(m=>m.ImdbUrl)
+    @Html.ValidationMessageFor(m=>m.ImdbUrl)<br/>
+
+    <span>TmdbUrl</span>
+    @Html.TextBoxFor(m=>m.TmdbUrl)
+    @Html.ValidationMessageFor(m=>m.TmdbUrl)<br/>
+
+    <span>PosterUrl</span>
+    @Html.TextBoxFor(m=>m.PosterUrl)
+    @Html.ValidationMessageFor(m=>m.PosterUrl)<br/>
+
+    <span>BackdropUrl</span>
+    @Html.TextBoxFor(m=>m.BackdropUrl)
+    @Html.ValidationMessageFor(m=>m.BackdropUrl)<br/>
+
+    <span>Original language</span>
+    @Html.TextBoxFor(m=>m.OriginalLanguage)
+    @Html.ValidationMessageFor(m=>m.OriginalLanguage)<br/>
+
+    <span>Run time</span>
+    @Html.TextBoxFor(m=>m.RunTime)
+    @Html.ValidationMessageFor(m=>m.RunTime)<br/>
+    
+    <span>Price</span>
+    @Html.TextBoxFor(m=>m.Price)
+    @Html.ValidationMessageFor(m=>m.Price)<br/>
+
+    <input type="submit" value="Save Movie"/>
+
+}

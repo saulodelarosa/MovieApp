@@ -1,0 +1,23 @@
+﻿@using ApplicationCore.Models
+@model IEnumerable<GenreModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@ViewBag.CompanyName <br/>
+@ViewData["CurrentDate"]
+
+<a href="/Genre/Create">Add New Genre</a>
+<table class="table">
+    <thead> <tr><th>Id</th> <th>Name</th> <th colspan="3">Options</th> </tr> </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr> <td>@m.Id</td> <td>@m.Name</td> <td>  <a href="" > <span class="bi bi-tools"></span>  Edit</a> </td>
+                
+            <td> <a href="">Details</a> </td> 
+            <td> <a href="/Genre/Delete/@m.Id">Delete</a> </td> 
+            </tr>
+
+        }
+    </tbody>
+</table>

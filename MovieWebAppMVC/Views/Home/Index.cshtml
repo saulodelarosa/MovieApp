@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Index">Genre</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Create">Create Genre</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Index">Movie</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Create">Create Movie</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </p>
+
+
+<style>
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid grey;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: lightblue;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid gray;
+  border-top: none;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}    
+
+@@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+document.getElementById("defaultOpen").click();
+
+
+</style>
+
+<script>
+
+
+  function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Movie')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Genre')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Privacy')">Tokyo</button>
+</div>
+
+<div id="Movie" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Movies</h3>
+                          <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Index">See All Movie Genres</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Create">Add A New Movie Genre</a>
+                        </p>
+
+</div>
+
+<div id="Genre" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Genres</h3>
+                          <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Index">See All Movie</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Create">Add A New Movie</a>
+                        </p>
+</div>
+
+<div id="Privacy" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Privacy</h3>
+                          <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Go to Privacy Page</a>
+                        </p>
+</div>

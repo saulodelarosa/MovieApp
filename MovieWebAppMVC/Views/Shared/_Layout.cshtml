@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MovieShopMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MovieShopMVC.styles.css" asp-append-version="true" />
+</head>
+
+ <style>
+
+
+            @@media (min-width: 991.98px) {
+              main {
+                padding-left: 200px;
+              }
+
+              #topNavBar{
+                padding-left: 200px;
+              }
+
+              #footer{
+                padding-left: 200px;
+              }
+
+
+            }
+
+          .sidebar {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          padding: 45px 0 0;
+          box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+          width: 200px;
+          z-index: 600;
+          }
+
+          @@media (max-width: 991.98px) {
+          .sidebar {
+            width: 100%;
+          }
+            }
+
+        .sidebar .active {
+          border-radius: 5px;
+          box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        }
+
+        .sidebar-sticky {
+          position: relative;
+          top: 0;
+          height: calc(100vh - 48px);
+          padding-top: 0.5rem;
+          overflow-x: hidden;
+          overflow-y: auto; 
+        }
+        </style>
+
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="topNavBar">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MovieShopMVC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Genre" asp-action="Index">Genre</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Index">Movie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+          
+    <nav
+       id="sidebarMenu"
+       class="collapse d-lg-block sidebar collapse bg-white"
+       >
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a class="list-group-item list-group-item-action py-2 ripple"
+           aria-current="true" asp-area="" asp-controller="Home" asp-action="Index">
+          <span > Home</span>
+        </a>
+        <a
+           class="list-group-item list-group-item-action py-2 ripple"
+           sp-area="" asp-controller="Genre" asp-action="Index">
+           <span> Genre</span>           
+        </a>
+        <a
+           
+           class="list-group-item list-group-item-action py-2 ripple"
+           asp-area="" asp-controller="Movie" asp-action="Index">
+           <span> Movie</span>
+       </a>
+        
+       <a
+           class="list-group-item list-group-item-action py-2 ripple"
+           asp-area="" asp-controller="Home" asp-action="Privacy">
+           <span> Privacy</span>
+       </a>
+
+
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" id="footer">
+        <div class="container">
+            &copy; 2022 - MovieWebAppMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
