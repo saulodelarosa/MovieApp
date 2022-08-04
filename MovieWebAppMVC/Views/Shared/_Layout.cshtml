@@ -6,10 +6,35 @@
     <title>@ViewData["Title"] - MovieShopMVC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="script" href="~/js/site.js" asp-append-version="true" />
+    <link rel="script" href="~/lib/jquery/dist/jquery.min.js" asp-append-version="true" />
+    <script src="jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="~/MovieShopMVC.styles.css" asp-append-version="true" />
 </head>
 
+
+          <script>
+
+
+          function openSideBar(evt, cityName) {
+              var i, tabcontent, tablinks;
+
+
+              tablinks = document.getElementsByClassName("list-group-item list-group-item-action py-2 ripple");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+          }
+
+      </script>
+
+
  <style>
+
+
 
 
             @@media (min-width: 991.98px) {
@@ -98,24 +123,24 @@
        >
     <div class="position-sticky">
       <div class="list-group list-group-flush mx-3 mt-4">
-        <a class="list-group-item list-group-item-action py-2 ripple"
+        <a class="list-group-item list-group-item-action py-2 ripple" id="HomeS" onclick="openSideBar(event, 'HomeS')"
            aria-current="true" asp-area="" asp-controller="Home" asp-action="Index">
           <span > Home</span>
         </a>
         <a
-           class="list-group-item list-group-item-action py-2 ripple"
+           class="list-group-item list-group-item-action py-2 ripple" id="GenreS" onclick="openSideBar(event, 'GenreS')"
            sp-area="" asp-controller="Genre" asp-action="Index">
            <span> Genre</span>           
         </a>
         <a
            
-           class="list-group-item list-group-item-action py-2 ripple"
+           class="list-group-item list-group-item-action py-2 ripple" id="MovieS" onclick="openSideBar(event, 'MovieS')"
            asp-area="" asp-controller="Movie" asp-action="Index">
            <span> Movie</span>
        </a>
         
        <a
-           class="list-group-item list-group-item-action py-2 ripple"
+           class="list-group-item list-group-item-action py-2 ripple" id="PrivacyS" onclick="openSideBar(event, 'PrivacyS')"
            asp-area="" asp-controller="Home" asp-action="Privacy">
            <span> Privacy</span>
        </a>
@@ -126,6 +151,17 @@
     </div>
   </nav>
 
+  <script>
+
+    $(document).ready(function() {
+    $(".nav-item").click(function () {
+        $(".nav-item").removeClass("active");
+        $(this).addClass("active");     
+    });
+}); 
+
+
+</script>
 
 
 

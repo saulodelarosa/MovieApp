@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YgWu53TKR5leb15xp74Yt6X0ngB8/u5KRSkvsY6xUiI=",
+  "Hash": "zCxCyit1bNlsy/S3J686kJ7RFBRy3Switx0fPs9HaK8=",
   "Source": "MovieWebAppMVC",
   "BasePath": "_content/MovieWebAppMVC",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\sa_de\\source\\repos\\MovieApp\\MovieWebAppMVC\\wwwroot\\js\\mbd.min.js",
+      "SourceId": "MovieWebAppMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sa_de\\source\\repos\\MovieApp\\MovieWebAppMVC\\wwwroot\\",
+      "BasePath": "_content/MovieWebAppMVC",
+      "RelativePath": "js/mbd.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\mbd.min.js"
     },
     {
       "Identity": "C:\\Users\\sa_de\\source\\repos\\MovieApp\\MovieWebAppMVC\\wwwroot\\js\\site.js",

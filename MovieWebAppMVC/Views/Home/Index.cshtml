@@ -83,8 +83,6 @@
 
 .topright:hover {color: red;}
 
-document.getElementById("defaultOpen").click();
-
 
 </style>
 
@@ -112,36 +110,43 @@ document.getElementById("defaultOpen").click();
   evt.currentTarget.className += " active";
 }
 
+document.getElementById("defaultOpen").click();
+
+
 </script>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Movie')" id="defaultOpen">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Genre')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Privacy')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Movie')" id="defaultOpen">Movie</button>
+  <button class="tablinks" onclick="openCity(event, 'Genre')">Genre</button>
+  <button class="tablinks" onclick="openCity(event, 'Privacy')">Privacy</button>
 </div>
 
 <div id="Movie" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Movies</h3>
-                          <p class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Index">See All Movie Genres</a>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Index">See All Movies</a>
                         </p>
 
                         <p class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Create">Add A New Movie Genre</a>
+                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Create">Add A New Movie</a>
                         </p>
+
 
 </div>
 
 <div id="Genre" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <h3>Genres</h3>
-                          <p class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Index">See All Movie</a>
+
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Index">See All Movie Genres</a>
                         </p>
 
                         <p class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Movie" asp-action="Create">Add A New Movie</a>
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Create">Add A New Movie Genre</a>
                         </p>
 </div>
 
@@ -152,3 +157,7 @@ document.getElementById("defaultOpen").click();
                             <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Go to Privacy Page</a>
                         </p>
 </div>
+
+<script>
+    document.getElementById("defaultOpen").click();
+</script>
