@@ -1,0 +1,24 @@
+﻿@using ApplicationCore.Models
+@model CastResponseModel
+
+<div class="row">
+    <div class="col-5">
+        <img src="@Model.ProfilePath" width="200px" height="350px"/>
+    </div>
+    <div class="col-7">
+        <table class="table table-bordered table-striped">
+            <tr> 
+                <td>Name</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr> 
+                <td>Gender</td>
+                <td>@Model.Gender</td>
+            </tr>
+            <tr> 
+                <td>IMDB</td>
+                <td><a href="@Model.TmdbUrl">IMDB LINK</a></td>
+            </tr>
+        </table>
+    </div>
+</div>

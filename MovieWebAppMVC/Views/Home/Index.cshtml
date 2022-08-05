@@ -26,6 +26,14 @@
                         </p>
 
                         <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Cast" asp-action="Index">Cast</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Cast" asp-action="Create">Create Cast</a>
+                        </p>
+
+                        <p class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </p>
 
@@ -118,7 +126,8 @@ document.getElementById("defaultOpen").click();
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Movie')" id="defaultOpen">Movie</button>
   <button class="tablinks" onclick="openCity(event, 'Genre')">Genre</button>
-  <button class="tablinks" onclick="openCity(event, 'Privacy')">Privacy</button>
+  <button class="tablinks" onclick="openCity(event, 'Cast')">Cast</button>
+    <button class="tablinks" onclick="openCity(event, 'Privacy')">Privacy</button>
 </div>
 
 <div id="Movie" class="tabcontent">
@@ -147,6 +156,20 @@ document.getElementById("defaultOpen").click();
 
                         <p class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Create">Add A New Movie Genre</a>
+                        </p>
+</div>
+
+<div id="Cast" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Cast</h3>
+
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Cast" asp-action="Index">See All Actors</a>
+                        </p>
+
+                        <p class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Cast" asp-action="Create">Add A New Cast Member</a>
                         </p>
 </div>
 

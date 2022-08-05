@@ -8,6 +8,10 @@ namespace ApplicationCore.Contracts.Services
 {
     public interface ICastService
     {
-       Task<CastResponseModel> GetAllCastAsync(int id);
+        Task<CastResponseModel> GetAllCastAsync(int id);
+        Task<IEnumerable<CastResponseModel>> GetAllCastAsyncAll();
+        Task<int> InsertCastAsync(CastResponseModel model);
+        Task<int> DeleteCastAsync(int id);
+        Task<int> UpdateCastAsync(CastResponseModel model);
     }
 }

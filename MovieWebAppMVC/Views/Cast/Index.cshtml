@@ -1,0 +1,30 @@
+﻿@using ApplicationCore.Models
+@model IEnumerable<CastResponseModel>
+
+
+<h2>All Actors</h2>
+<a class="nav-link " asp-area="" asp-controller="Cast" asp-action="Create">Add New Actor</a>
+<table>
+    @{
+        <div class="row">
+        @foreach (var m in Model)
+        {
+
+            <div class="card col-3" style="margin-right:2px; margin-bottom:5px;" >
+            
+                <img src="@m.ProfilePath" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@m.Name</h5>
+                    <a class="btn btn-primary" asp-action="Detail" asp-controller="Cast" asp-route-id="@m.Id">Details</a>
+                </div>
+            </div>
+
+
+        }
+        </div>
+
+    }
+
+
+
+</table>
