@@ -19,6 +19,11 @@
                 <td>IMDB</td>
                 <td><a href="@Model.TmdbUrl">IMDB LINK</a></td>
             </tr>
+             <tr> 
+                <td>Delete Actor</td>
+                <td>                <a asp-action ="Delete" class="btn btn-danger" asp-controller="Cast" asp-route-regionId="@Model.Id" >Delete</a></td>
+            </tr>
         </table>
     </div>
 </div>
+

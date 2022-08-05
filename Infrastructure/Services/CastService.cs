@@ -65,8 +65,11 @@ namespace Infrastructure.Services
         {
 
             Cast g = new Cast();
-
             g.Name = model.Name;
+            g.Gender = model.Gender;
+            g.TmdbUrl = model.TmdbUrl;
+            g.ProfilePath = model.ProfilePath;
+
             return await _castRepository.InsertAsync(g);
 
         }
@@ -77,7 +80,13 @@ namespace Infrastructure.Services
 
         public async Task<int> UpdateCastAsync(CastResponseModel model)
         {
-            Cast g = new Cast() { Id = model.Id, Name = model.Name };
+            Cast g = new Cast() { 
+                Id = model.Id,
+                Name = model.Name,
+                Gender = model.Gender,
+                TmdbUrl = model.TmdbUrl,
+                ProfilePath = model.ProfilePath,
+        };
             return await _castRepository.UpdateAsync(g);
         }
 

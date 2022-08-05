@@ -1,13 +1,13 @@
 ﻿@using ApplicationCore.Models
 @model CastResponseModel
 
-@using (@Html.BeginForm("Create","Movie",FormMethod.Post))
+@using (@Html.BeginForm("Create","Cast",FormMethod.Post))
 {
     <span>Name</span>
     @Html.EditorFor(m=>m.Name)
     @Html.ValidationMessageFor(m=>m.Name)<br/>
     <span>Gender</span>
-    @Html.TextAreaFor(m=>m.Gender)
+    @Html.EditorFor(m=>m.Gender)
     @Html.ValidationMessageFor(m=>m.Gender)<br/>
     
     <span>IMDB URL</span>
@@ -19,6 +19,37 @@
     @Html.ValidationMessageFor(m=>m.ProfilePath)<br/>
 
 
-    <input type="submit" value="Save Movie"/>
+    <input type="submit" value="Save Cast"/>
 
 }
+
+
+<form asp-action="Create" asp-controller="Cast" method="post">
+    <div class="row">
+        <div class="col-3 mb-3">
+            <label for="txtName">Name</label>
+            <input type="text" id="txtName" name="Name" class="form-control" placeholder="Enter Actor Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+         <div class="col-3 mb-3">
+            <label for="txtGender">Gender</label>
+            <input type="text" id="txtGender" name="Gender" class="form-control" placeholder="Enter Gender" />
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+         <div class="col-4 mb-3">
+            <label for="txtPhotoIMDB">IMDB Link</label>
+            <input type="url" id="txtPhotoIMDB" name="TmdbUrl" class="form-control" placeholder="Enter IMDB Url" />
+            <span asp-validation-for="TmdbUrl" class="text-danger"></span>
+        </div>
+
+        <div class="col-4 mb-3">
+            <label for="txtPhoto">Photo</label>
+            <input type="url" id="txtPhoto" name="ProfilePath" class="form-control" placeholder="Enter Photo Url" />
+            <span asp-validation-for="ProfilePath" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="Save" />
+</form>
