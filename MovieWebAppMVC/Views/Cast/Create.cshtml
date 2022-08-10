@@ -1,27 +1,6 @@
 ﻿@using ApplicationCore.Models
 @model CastResponseModel
 
-@using (@Html.BeginForm("Create","Cast",FormMethod.Post))
-{
-    <span>Name</span>
-    @Html.EditorFor(m=>m.Name)
-    @Html.ValidationMessageFor(m=>m.Name)<br/>
-    <span>Gender</span>
-    @Html.EditorFor(m=>m.Gender)
-    @Html.ValidationMessageFor(m=>m.Gender)<br/>
-    
-    <span>IMDB URL</span>
-    @Html.TextBoxFor(m=>m.TmdbUrl)
-    @Html.ValidationMessageFor(m=>m.TmdbUrl)<br/>
-    
-    <span>Picture Link</span>
-    @Html.TextBoxFor(m=>m.ProfilePath)
-    @Html.ValidationMessageFor(m=>m.ProfilePath)<br/>
-
-
-    <input type="submit" value="Save Cast"/>
-
-}
 
 
 <form asp-action="Create" asp-controller="Cast" method="post">
