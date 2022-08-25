@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieWebAppMVC", "MovieWebAppMVC\MovieWebAppMVC.csproj", "{38373827-477B-4A64-A092-3AB4A3F6DCE9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieWebAppAPI", "MovieWebAppAPI\MovieWebAppAPI.csproj", "{3B191E2C-0BF1-41B2-B488-372FE1F92B3C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{198EF92E-F392-4504-AE37-FB8CE51E9C77} = {198EF92E-F392-4504-AE37-FB8CE51E9C77}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +32,10 @@ Global
 		{38373827-477B-4A64-A092-3AB4A3F6DCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38373827-477B-4A64-A092-3AB4A3F6DCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38373827-477B-4A64-A092-3AB4A3F6DCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B191E2C-0BF1-41B2-B488-372FE1F92B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B191E2C-0BF1-41B2-B488-372FE1F92B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B191E2C-0BF1-41B2-B488-372FE1F92B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B191E2C-0BF1-41B2-B488-372FE1F92B3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,7 @@ using ApplicationCore.Entities;
 using ApplicationCore.Models;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+
 namespace Infrastructure.Repositories
 {
     public class MovieRepository : BaseRepository<Movie>, IMovieRepository
